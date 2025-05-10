@@ -1,47 +1,1061 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combate à Violência contra Idosos e PCD</title>
-    <style>
-        /* [Todo o CSS anterior permanece IGUAL] */
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Webcrumbs Plugin</title>
+        <style>
+            @import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+            @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+            @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 
-        /* Apenas ADICIONE isso no final do CSS existente: */
-        @media print {
+            /*! tailwindcss v3.4.11 | MIT License | https://tailwindcss.com*/
+            *,
+            :after,
+            :before {
+                border: 0 solid #e5e7eb;
+                box-sizing: border-box;
+            }
+            :after,
+            :before {
+                --tw-content: "";
+            }
+            :host,
+            html {
+                line-height: 1.5;
+                -webkit-text-size-adjust: 100%;
+                font-family:
+                    Open Sans,
+                    ui-sans-serif,
+                    system-ui,
+                    sans-serif,
+                    Apple Color Emoji,
+                    Segoe UI Emoji,
+                    Segoe UI Symbol,
+                    Noto Color Emoji;
+                font-feature-settings: normal;
+                font-variation-settings: normal;
+                -moz-tab-size: 4;
+                tab-size: 4;
+                -webkit-tap-highlight-color: transparent;
+            }
+            body {
+                line-height: inherit;
+                margin: 0;
+            }
+            hr {
+                border-top-width: 1px;
+                color: inherit;
+                height: 0;
+            }
+            abbr:where([title]) {
+                text-decoration: underline dotted;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size: inherit;
+                font-weight: inherit;
+            }
+            a {
+                color: inherit;
+                text-decoration: inherit;
+            }
+            b,
+            strong {
+                font-weight: bolder;
+            }
+            code,
+            kbd,
+            pre,
+            samp {
+                font-family:
+                    ui-monospace,
+                    SFMono-Regular,
+                    Menlo,
+                    Monaco,
+                    Consolas,
+                    Liberation Mono,
+                    Courier New,
+                    monospace;
+                font-feature-settings: normal;
+                font-size: 1em;
+                font-variation-settings: normal;
+            }
+            small {
+                font-size: 80%;
+            }
+            sub,
+            sup {
+                font-size: 75%;
+                line-height: 0;
+                position: relative;
+                vertical-align: baseline;
+            }
+            sub {
+                bottom: -0.25em;
+            }
+            sup {
+                top: -0.5em;
+            }
+            table {
+                border-collapse: collapse;
+                border-color: inherit;
+                text-indent: 0;
+            }
+            button,
+            input,
+            optgroup,
+            select,
+            textarea {
+                color: inherit;
+                font-family: inherit;
+                font-feature-settings: inherit;
+                font-size: 100%;
+                font-variation-settings: inherit;
+                font-weight: inherit;
+                letter-spacing: inherit;
+                line-height: inherit;
+                margin: 0;
+                padding: 0;
+            }
+            button,
+            select {
+                text-transform: none;
+            }
+            button,
+            input:where([type="button"]),
+            input:where([type="reset"]),
+            input:where([type="submit"]) {
+                -webkit-appearance: button;
+                background-color: transparent;
+                background-image: none;
+            }
+            :-moz-focusring {
+                outline: auto;
+            }
+            :-moz-ui-invalid {
+                box-shadow: none;
+            }
+            progress {
+                vertical-align: baseline;
+            }
+            ::-webkit-inner-spin-button,
+            ::-webkit-outer-spin-button {
+                height: auto;
+            }
+            [type="search"] {
+                -webkit-appearance: textfield;
+                outline-offset: -2px;
+            }
+            ::-webkit-search-decoration {
+                -webkit-appearance: none;
+            }
+            ::-webkit-file-upload-button {
+                -webkit-appearance: button;
+                font: inherit;
+            }
+            summary {
+                display: list-item;
+            }
+            blockquote,
+            dd,
+            dl,
+            figure,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            hr,
+            p,
+            pre {
+                margin: 0;
+            }
+            fieldset {
+                margin: 0;
+            }
+            fieldset,
+            legend {
+                padding: 0;
+            }
+            menu,
+            ol,
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            dialog {
+                padding: 0;
+            }
+            textarea {
+                resize: vertical;
+            }
+            input::placeholder,
+            textarea::placeholder {
+                color: #9ca3af;
+                opacity: 1;
+            }
+            [role="button"],
+            button {
+                cursor: pointer;
+            }
+            :disabled {
+                cursor: default;
+            }
+            audio,
+            canvas,
+            embed,
+            iframe,
+            img,
+            object,
+            svg,
+            video {
+                display: block;
+                vertical-align: middle;
+            }
+            img,
+            video {
+                height: auto;
+                max-width: 100%;
+            }
+            [hidden] {
+                display: none;
+            }
+            *,
+            :after,
+            :before {
+                --tw-border-spacing-x: 0;
+                --tw-border-spacing-y: 0;
+                --tw-translate-x: 0;
+                --tw-translate-y: 0;
+                --tw-rotate: 0;
+                --tw-skew-x: 0;
+                --tw-skew-y: 0;
+                --tw-scale-x: 1;
+                --tw-scale-y: 1;
+                --tw-pan-x: ;
+                --tw-pan-y: ;
+                --tw-pinch-zoom: ;
+                --tw-scroll-snap-strictness: proximity;
+                --tw-gradient-from-position: ;
+                --tw-gradient-via-position: ;
+                --tw-gradient-to-position: ;
+                --tw-ordinal: ;
+                --tw-slashed-zero: ;
+                --tw-numeric-figure: ;
+                --tw-numeric-spacing: ;
+                --tw-numeric-fraction: ;
+                --tw-ring-inset: ;
+                --tw-ring-offset-width: 0px;
+                --tw-ring-offset-color: #fff;
+                --tw-ring-color: rgba(59, 130, 246, 0.5);
+                --tw-ring-offset-shadow: 0 0 #0000;
+                --tw-ring-shadow: 0 0 #0000;
+                --tw-shadow: 0 0 #0000;
+                --tw-shadow-colored: 0 0 #0000;
+                --tw-blur: ;
+                --tw-brightness: ;
+                --tw-contrast: ;
+                --tw-grayscale: ;
+                --tw-hue-rotate: ;
+                --tw-invert: ;
+                --tw-saturate: ;
+                --tw-sepia: ;
+                --tw-drop-shadow: ;
+                --tw-backdrop-blur: ;
+                --tw-backdrop-brightness: ;
+                --tw-backdrop-contrast: ;
+                --tw-backdrop-grayscale: ;
+                --tw-backdrop-hue-rotate: ;
+                --tw-backdrop-invert: ;
+                --tw-backdrop-opacity: ;
+                --tw-backdrop-saturate: ;
+                --tw-backdrop-sepia: ;
+                --tw-contain-size: ;
+                --tw-contain-layout: ;
+                --tw-contain-paint: ;
+                --tw-contain-style: ;
+            }
+            ::backdrop {
+                --tw-border-spacing-x: 0;
+                --tw-border-spacing-y: 0;
+                --tw-translate-x: 0;
+                --tw-translate-y: 0;
+                --tw-rotate: 0;
+                --tw-skew-x: 0;
+                --tw-skew-y: 0;
+                --tw-scale-x: 1;
+                --tw-scale-y: 1;
+                --tw-pan-x: ;
+                --tw-pan-y: ;
+                --tw-pinch-zoom: ;
+                --tw-scroll-snap-strictness: proximity;
+                --tw-gradient-from-position: ;
+                --tw-gradient-via-position: ;
+                --tw-gradient-to-position: ;
+                --tw-ordinal: ;
+                --tw-slashed-zero: ;
+                --tw-numeric-figure: ;
+                --tw-numeric-spacing: ;
+                --tw-numeric-fraction: ;
+                --tw-ring-inset: ;
+                --tw-ring-offset-width: 0px;
+                --tw-ring-offset-color: #fff;
+                --tw-ring-color: rgba(59, 130, 246, 0.5);
+                --tw-ring-offset-shadow: 0 0 #0000;
+                --tw-ring-shadow: 0 0 #0000;
+                --tw-shadow: 0 0 #0000;
+                --tw-shadow-colored: 0 0 #0000;
+                --tw-blur: ;
+                --tw-brightness: ;
+                --tw-contrast: ;
+                --tw-grayscale: ;
+                --tw-hue-rotate: ;
+                --tw-invert: ;
+                --tw-saturate: ;
+                --tw-sepia: ;
+                --tw-drop-shadow: ;
+                --tw-backdrop-blur: ;
+                --tw-backdrop-brightness: ;
+                --tw-backdrop-contrast: ;
+                --tw-backdrop-grayscale: ;
+                --tw-backdrop-hue-rotate: ;
+                --tw-backdrop-invert: ;
+                --tw-backdrop-opacity: ;
+                --tw-backdrop-saturate: ;
+                --tw-backdrop-sepia: ;
+                --tw-contain-size: ;
+                --tw-contain-layout: ;
+                --tw-contain-paint: ;
+                --tw-contain-style: ;
+            }
+            #webcrumbs .absolute {
+                position: absolute;
+            }
+            #webcrumbs .relative {
+                position: relative;
+            }
+            #webcrumbs .inset-0 {
+                inset: 0;
+            }
+            #webcrumbs .bottom-0 {
+                bottom: 0;
+            }
+            #webcrumbs .left-0 {
+                left: 0;
+            }
+            #webcrumbs .right-0 {
+                right: 0;
+            }
+            #webcrumbs .mx-auto {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #webcrumbs .mb-10 {
+                margin-bottom: 40px;
+            }
+            #webcrumbs .mb-16 {
+                margin-bottom: 64px;
+            }
+            #webcrumbs .mb-2 {
+                margin-bottom: 8px;
+            }
+            #webcrumbs .mb-20 {
+                margin-bottom: 80px;
+            }
+            #webcrumbs .mb-3 {
+                margin-bottom: 12px;
+            }
+            #webcrumbs .mb-4 {
+                margin-bottom: 16px;
+            }
+            #webcrumbs .mb-6 {
+                margin-bottom: 24px;
+            }
+            #webcrumbs .mb-8 {
+                margin-bottom: 32px;
+            }
+            #webcrumbs .ml-1 {
+                margin-left: 4px;
+            }
+            #webcrumbs .mr-2 {
+                margin-right: 8px;
+            }
+            #webcrumbs .mr-4 {
+                margin-right: 16px;
+            }
+            #webcrumbs .mt-4 {
+                margin-top: 16px;
+            }
+            #webcrumbs .mt-6 {
+                margin-top: 24px;
+            }
+            #webcrumbs .block {
+                display: block;
+            }
+            #webcrumbs .flex {
+                display: flex;
+            }
+            #webcrumbs .grid {
+                display: grid;
+            }
+            #webcrumbs .hidden {
+                display: none;
+            }
+            #webcrumbs .h-1 {
+                height: 4px;
+            }
+            #webcrumbs .h-10 {
+                height: 40px;
+            }
+            #webcrumbs .h-14 {
+                height: 56px;
+            }
+            #webcrumbs .h-48 {
+                height: 192px;
+            }
+            #webcrumbs .h-full {
+                height: 100%;
+            }
+            #webcrumbs .w-10 {
+                width: 40px;
+            }
+            #webcrumbs .w-14 {
+                width: 56px;
+            }
+            #webcrumbs .w-24 {
+                width: 96px;
+            }
+            #webcrumbs .w-full {
+                width: 100%;
+            }
+            #webcrumbs .max-w-3xl {
+                max-width: 48rem;
+            }
+            #webcrumbs .max-w-\[1280px\] {
+                max-width: 1280px;
+            }
+            #webcrumbs .transform {
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+                    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            }
+            #webcrumbs .cursor-pointer {
+                cursor: pointer;
+            }
+            #webcrumbs .grid-cols-1 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            #webcrumbs .flex-row {
+                flex-direction: row;
+            }
+            #webcrumbs .flex-col {
+                flex-direction: column;
+            }
+            #webcrumbs .items-start {
+                align-items: flex-start;
+            }
+            #webcrumbs .items-center {
+                align-items: center;
+            }
+            #webcrumbs .justify-center {
+                justify-content: center;
+            }
+            #webcrumbs .justify-between {
+                justify-content: space-between;
+            }
+            #webcrumbs .gap-12 {
+                gap: 48px;
+            }
+            #webcrumbs .gap-4 {
+                gap: 16px;
+            }
+            #webcrumbs .gap-6 {
+                gap: 24px;
+            }
+            #webcrumbs .gap-8 {
+                gap: 32px;
+            }
+            #webcrumbs :is(.space-x-4 > :not([hidden]) ~ :not([hidden])) {
+                --tw-space-x-reverse: 0;
+                margin-left: calc(16px * (1 - var(--tw-space-x-reverse)));
+                margin-right: calc(16px * var(--tw-space-x-reverse));
+            }
+            #webcrumbs :is(.space-y-2 > :not([hidden]) ~ :not([hidden])) {
+                --tw-space-y-reverse: 0;
+                margin-bottom: calc(8px * var(--tw-space-y-reverse));
+                margin-top: calc(8px * (1 - var(--tw-space-y-reverse)));
+            }
+            #webcrumbs :is(.space-y-3 > :not([hidden]) ~ :not([hidden])) {
+                --tw-space-y-reverse: 0;
+                margin-bottom: calc(12px * var(--tw-space-y-reverse));
+                margin-top: calc(12px * (1 - var(--tw-space-y-reverse)));
+            }
+            #webcrumbs :is(.space-y-4 > :not([hidden]) ~ :not([hidden])) {
+                --tw-space-y-reverse: 0;
+                margin-bottom: calc(16px * var(--tw-space-y-reverse));
+                margin-top: calc(16px * (1 - var(--tw-space-y-reverse)));
+            }
+            #webcrumbs .overflow-hidden {
+                overflow: hidden;
+            }
+            #webcrumbs .rounded-2xl {
+                border-radius: 16px;
+            }
+            #webcrumbs .rounded-full {
+                border-radius: 9999px;
+            }
+            #webcrumbs .rounded-lg {
+                border-radius: 8px;
+            }
+            #webcrumbs .rounded-xl {
+                border-radius: 12px;
+            }
+            #webcrumbs .rounded-r-lg {
+                border-bottom-right-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+            #webcrumbs .border {
+                border-width: 1px;
+            }
+            #webcrumbs .border-l-4 {
+                border-left-width: 4px;
+            }
+            #webcrumbs .border-t {
+                border-top-width: 1px;
+            }
+            #webcrumbs .border-blue-500 {
+                --tw-border-opacity: 1;
+                border-color: rgb(59 130 246 / var(--tw-border-opacity));
+            }
+            #webcrumbs .border-gray-200 {
+                --tw-border-opacity: 1;
+                border-color: rgb(229 231 235 / var(--tw-border-opacity));
+            }
+            #webcrumbs .border-green-500 {
+                --tw-border-opacity: 1;
+                border-color: rgb(34 197 94 / var(--tw-border-opacity));
+            }
+            #webcrumbs .border-indigo-600 {
+                --tw-border-opacity: 1;
+                border-color: rgb(79 70 229 / var(--tw-border-opacity));
+            }
+            #webcrumbs .border-orange-500 {
+                --tw-border-opacity: 1;
+                border-color: rgb(249 115 22 / var(--tw-border-opacity));
+            }
+            #webcrumbs .border-purple-500 {
+                --tw-border-opacity: 1;
+                border-color: rgb(168 85 247 / var(--tw-border-opacity));
+            }
+            #webcrumbs .border-red-500 {
+                --tw-border-opacity: 1;
+                border-color: rgb(239 68 68 / var(--tw-border-opacity));
+            }
+            #webcrumbs .border-yellow-400 {
+                --tw-border-opacity: 1;
+                border-color: rgb(250 204 21 / var(--tw-border-opacity));
+            }
+            #webcrumbs .border-yellow-500 {
+                --tw-border-opacity: 1;
+                border-color: rgb(234 179 8 / var(--tw-border-opacity));
+            }
+            #webcrumbs .bg-indigo-100 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(224 231 255 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .bg-indigo-200 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(199 210 254 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .bg-indigo-50 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(238 242 255 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .bg-indigo-800 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(55 48 163 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .bg-indigo-900 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(49 46 129 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .bg-primary-100 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .bg-primary-500 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(61 130 244 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .bg-primary-600 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(39 98 233 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .bg-white {
+                --tw-bg-opacity: 1;
+                background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .bg-yellow-50 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(254 252 232 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .bg-gradient-to-b {
+                background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+            }
+            #webcrumbs .bg-gradient-to-r {
+                background-image: linear-gradient(to right, var(--tw-gradient-stops));
+            }
+            #webcrumbs .bg-gradient-to-t {
+                background-image: linear-gradient(to top, var(--tw-gradient-stops));
+            }
+            #webcrumbs .from-indigo-50 {
+                --tw-gradient-from: #eef2ff var(--tw-gradient-from-position);
+                --tw-gradient-to: rgba(238, 242, 255, 0) var(--tw-gradient-to-position);
+                --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+            }
+            #webcrumbs .from-indigo-900 {
+                --tw-gradient-from: #312e81 var(--tw-gradient-from-position);
+                --tw-gradient-to: rgba(49, 46, 129, 0) var(--tw-gradient-to-position);
+                --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+            }
+            #webcrumbs .to-transparent {
+                --tw-gradient-to: transparent var(--tw-gradient-to-position);
+            }
+            #webcrumbs .to-white {
+                --tw-gradient-to: #fff var(--tw-gradient-to-position);
+            }
+            #webcrumbs .object-cover {
+                object-fit: cover;
+            }
+            #webcrumbs .p-2 {
+                padding: 8px;
+            }
+            #webcrumbs .p-4 {
+                padding: 16px;
+            }
+            #webcrumbs .p-6 {
+                padding: 24px;
+            }
+            #webcrumbs .p-8 {
+                padding: 32px;
+            }
+            #webcrumbs .px-4 {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            #webcrumbs .px-6 {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            #webcrumbs .py-2 {
+                padding-bottom: 8px;
+                padding-top: 8px;
+            }
+            #webcrumbs .py-3 {
+                padding-bottom: 12px;
+                padding-top: 12px;
+            }
+            #webcrumbs .pt-6 {
+                padding-top: 24px;
+            }
+            #webcrumbs .text-center {
+                text-align: center;
+            }
+            #webcrumbs .font-sans {
+                font-family:
+                    Open Sans,
+                    ui-sans-serif,
+                    system-ui,
+                    sans-serif,
+                    Apple Color Emoji,
+                    Segoe UI Emoji,
+                    Segoe UI Symbol,
+                    Noto Color Emoji;
+            }
+            #webcrumbs .text-2xl {
+                font-size: 24px;
+                line-height: 31.200000000000003px;
+            }
+            #webcrumbs .text-3xl {
+                font-size: 30px;
+                line-height: 36px;
+            }
+            #webcrumbs .text-4xl {
+                font-size: 36px;
+                line-height: 41.4px;
+            }
+            #webcrumbs .text-base {
+                font-size: 16px;
+                line-height: 25.6px;
+            }
+            #webcrumbs .text-lg {
+                font-size: 18px;
+                line-height: 27px;
+            }
+            #webcrumbs .text-sm {
+                font-size: 14px;
+                line-height: 21px;
+            }
+            #webcrumbs .text-xl {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            #webcrumbs .font-bold {
+                font-weight: 700;
+            }
+            #webcrumbs .font-semibold {
+                font-weight: 600;
+            }
+            #webcrumbs .italic {
+                font-style: italic;
+            }
+            #webcrumbs .text-blue-500 {
+                --tw-text-opacity: 1;
+                color: rgb(59 130 246 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-gray-500 {
+                --tw-text-opacity: 1;
+                color: rgb(107 114 128 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-gray-600 {
+                --tw-text-opacity: 1;
+                color: rgb(75 85 99 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-gray-700 {
+                --tw-text-opacity: 1;
+                color: rgb(55 65 81 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-green-500 {
+                --tw-text-opacity: 1;
+                color: rgb(34 197 94 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-indigo-600 {
+                --tw-text-opacity: 1;
+                color: rgb(79 70 229 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-indigo-800 {
+                --tw-text-opacity: 1;
+                color: rgb(55 48 163 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-indigo-900 {
+                --tw-text-opacity: 1;
+                color: rgb(49 46 129 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-orange-500 {
+                --tw-text-opacity: 1;
+                color: rgb(249 115 22 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-primary-600 {
+                --tw-text-opacity: 1;
+                color: rgb(39 98 233 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-purple-500 {
+                --tw-text-opacity: 1;
+                color: rgb(168 85 247 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-red-500 {
+                --tw-text-opacity: 1;
+                color: rgb(239 68 68 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-white {
+                --tw-text-opacity: 1;
+                color: rgb(255 255 255 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-yellow-400 {
+                --tw-text-opacity: 1;
+                color: rgb(250 204 21 / var(--tw-text-opacity));
+            }
+            #webcrumbs .text-yellow-500 {
+                --tw-text-opacity: 1;
+                color: rgb(234 179 8 / var(--tw-text-opacity));
+            }
+            #webcrumbs .underline {
+                text-decoration-line: underline;
+            }
+            #webcrumbs .shadow-2xl {
+                --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+            }
+            #webcrumbs .shadow-2xl,
+            #webcrumbs .shadow-lg {
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            }
+            #webcrumbs .shadow-lg {
+                --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+                --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+            }
+            #webcrumbs .shadow-md {
+                --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+                --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            }
+            #webcrumbs .transition-all {
+                transition-duration: 0.15s;
+                transition-property: all;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            #webcrumbs .transition-colors {
+                transition-duration: 0.15s;
+                transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            #webcrumbs .transition-transform {
+                transition-duration: 0.15s;
+                transition-property: transform;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            #webcrumbs .duration-200 {
+                transition-duration: 0.2s;
+            }
+            #webcrumbs .duration-500 {
+                transition-duration: 0.5s;
+            }
+            #webcrumbs {
+                font-family: Montserrat !important;
+                font-size: 16px !important;
+            }
+            #webcrumbs :is(.bg-primary-100) {
+                color: rgba(0, 0, 0, 0.9) !important;
+            }
+            #webcrumbs :is(.bg-primary-500) {
+                color: hsla(0, 0%, 100%, 0.9) !important;
+                font-weight: 600;
+            }
+            #webcrumbs :is(.bg-primary-600) {
+                color: hsla(0, 0%, 100%, 0.9) !important;
+            }
+            #webcrumbs .hover\:-translate-y-1:hover {
+                --tw-translate-y: -4px;
+            }
+            #webcrumbs .hover\:-translate-y-1:hover,
+            #webcrumbs .hover\:-translate-y-2:hover {
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+                    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            }
+            #webcrumbs .hover\:-translate-y-2:hover {
+                --tw-translate-y: -8px;
+            }
+            #webcrumbs .hover\:scale-105:hover {
+                --tw-scale-x: 1.05;
+                --tw-scale-y: 1.05;
+            }
+            #webcrumbs .hover\:scale-105:hover,
+            #webcrumbs .hover\:scale-\[1\.02\]:hover {
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+                    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            }
+            #webcrumbs .hover\:scale-\[1\.02\]:hover {
+                --tw-scale-x: 1.02;
+                --tw-scale-y: 1.02;
+            }
+            #webcrumbs .hover\:bg-indigo-100:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(224 231 255 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .hover\:bg-indigo-200:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(199 210 254 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .hover\:bg-indigo-50:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(238 242 255 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .hover\:bg-primary-700:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(31 78 214 / var(--tw-bg-opacity));
+            }
+            #webcrumbs .hover\:text-indigo-600:hover {
+                --tw-text-opacity: 1;
+                color: rgb(79 70 229 / var(--tw-text-opacity));
+            }
+            #webcrumbs .hover\:text-primary-800:hover {
+                --tw-text-opacity: 1;
+                color: rgb(32 64 173 / var(--tw-text-opacity));
+            }
+            #webcrumbs .hover\:shadow-lg:hover {
+                --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+                --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+            }
+            #webcrumbs .hover\:shadow-lg:hover,
+            #webcrumbs .hover\:shadow-xl:hover {
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            }
+            #webcrumbs .hover\:shadow-xl:hover {
+                --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+                --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+            }
+            #webcrumbs .focus\:outline-none:focus {
+                outline: 2px solid transparent;
+                outline-offset: 2px;
+            }
+            #webcrumbs .focus\:ring-2:focus {
+                --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width)
+                    var(--tw-ring-offset-color);
+                --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width))
+                    var(--tw-ring-color);
+                box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+            }
+            #webcrumbs .focus\:ring-indigo-400:focus {
+                --tw-ring-opacity: 1;
+                --tw-ring-color: rgb(129 140 248 / var(--tw-ring-opacity));
+            }
+            #webcrumbs .active\:scale-\[0\.98\]:active {
+                --tw-scale-x: 0.98;
+                --tw-scale-y: 0.98;
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+                    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            }
+            #webcrumbs :is(.group[open] .group-open\:rotate-180) {
+                --tw-rotate: 180deg;
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+                    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            }
+            #webcrumbs :is(.group:hover .group-hover\:scale-105) {
+                --tw-scale-x: 1.05;
+                --tw-scale-y: 1.05;
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+                    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            }
+            @media (min-width: 768px) {
+                #webcrumbs .md\:mb-12 {
+                    margin-bottom: 48px;
+                }
+                #webcrumbs .md\:mb-16 {
+                    margin-bottom: 64px;
+                }
+                #webcrumbs .md\:mb-4 {
+                    margin-bottom: 16px;
+                }
+                #webcrumbs .md\:mb-6 {
+                    margin-bottom: 24px;
+                }
+                #webcrumbs .md\:mb-8 {
+                    margin-bottom: 32px;
+                }
+                #webcrumbs .md\:block {
+                    display: block;
+                }
+                #webcrumbs .md\:h-auto {
+                    height: auto;
+                }
+                #webcrumbs .md\:w-1\/2 {
+                    width: 50%;
+                }
+                #webcrumbs .md\:grid-cols-2 {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+                #webcrumbs .md\:flex-row {
+                    flex-direction: row;
+                }
+                #webcrumbs .md\:gap-6 {
+                    gap: 24px;
+                }
+                #webcrumbs .md\:gap-8 {
+                    gap: 32px;
+                }
+                #webcrumbs .md\:rounded-xl {
+                    border-radius: 12px;
+                }
+                #webcrumbs .md\:p-12 {
+                    padding: 48px;
+                }
+                #webcrumbs .md\:p-6 {
+                    padding: 24px;
+                }
+                #webcrumbs .md\:text-3xl {
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+                #webcrumbs .md\:text-base {
+                    font-size: 16px;
+                    line-height: 25.6px;
+                }
+                #webcrumbs .md\:text-lg {
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+                #webcrumbs .md\:hover\:-translate-y-2:hover {
+                    --tw-translate-y: -8px;
+                    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+                        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+                        scaleY(var(--tw-scale-y));
+                }
+            }
+            @media (min-width: 1024px) {
+                #webcrumbs .lg\:mb-16 {
+                    margin-bottom: 64px;
+                }
+                #webcrumbs .lg\:mb-20 {
+                    margin-bottom: 80px;
+                }
+                #webcrumbs .lg\:w-1\/2 {
+                    width: 50%;
+                }
+                #webcrumbs .lg\:grid-cols-3 {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
+                #webcrumbs .lg\:grid-cols-4 {
+                    grid-template-columns: repeat(4, minmax(0, 1fr));
+                }
+                #webcrumbs .lg\:flex-row {
+                    flex-direction: row;
+                }
+                #webcrumbs .lg\:gap-8 {
+                    gap: 32px;
+                }
+                #webcrumbs .lg\:p-8 {
+                    padding: 32px;
+                }
+            }
+
+            body {
+                line-height: inherit;
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                min-width: 100vw;
+                min-height: 100vh;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, #ffffff, #d4d4d4);
+            }
+             @media print {
             body {
                 background: white !important;
                 padding: 20px !important;
-                min-width: auto !important;
             }
 
             #webcrumbs {
-                width: 100% !important;
-                max-width: 800px !important;
-                margin: 0 auto !important;
                 box-shadow: none !important;
                 background: white !important;
                 padding: 0 !important;
+                max-width: 800px !important;
             }
 
             img, video, iframe, button, a, .material-symbols-outlined {
                 display: none !important;
             }
 
-            .bg-gradient-to-t, .bg-gradient-to-b, .shadow-lg, .shadow-md {
+            .bg-gradient-to-t, .shadow-lg, .shadow-md {
                 background-image: none !important;
                 box-shadow: none !important;
             }
 
-            .text-primary-600, .text-indigo-800, .text-indigo-600 {
+            .text-primary-600, .text-indigo-800 {
                 color: #000 !important;
             }
 
-            .bg-indigo-100, .bg-white, .bg-yellow-50 {
+            .bg-indigo-100, .bg-white {
                 background: white !important;
             }
 
-            .border, .border-l-4 {
+            .border {
                 border-color: #ccc !important;
             }
 
@@ -53,7 +1067,7 @@
                 display: block !important;
             }
 
-            .gap-6, .gap-8, .space-y-4 > * {
+            .gap-6, .gap-8 {
                 margin: 12px 0 !important;
             }
 
@@ -65,16 +1079,323 @@
             .text-3xl { font-size: 24px !important; }
             .text-2xl { font-size: 20px !important; }
             .text-xl { font-size: 18px !important; }
-            .text-lg { font-size: 16px !important; }
-            .text-base { font-size: 14px !important; }
-            .text-sm { font-size: 12px !important; }
         }
-    </style>
-</head>
-<body>
-    <!-- [Todo o HTML anterior permanece EXATAMENTE IGUAL] -->
-    <div id="webcrumbs">
-        ... [todo o conteúdo permanece igual] ...
-    </div>
-</body>
+        </style>
+    </head>
+    <body>
+        <div id="webcrumbs">
+            <div
+                class="w-full max-w-[1280px] p-4 md:p-6 lg:p-8 font-sans bg-gradient-to-b from-indigo-50 to-white mx-auto"
+            >
+                <header class="mb-8 md:mb-12 lg:mb-16 text-center">
+                    <h1 class="text-4xl font-bold text-indigo-800 mb-4">
+                        Violência Contra Idosos e Pessoas com Deficiência
+                    </h1>
+                    <p class="text-base md:text-lg text-indigo-600 max-w-3xl mx-auto">
+                        Um portfolio dedicado à conscientização e combate à violência contra grupos vulneráveis na
+                        sociedade
+                    </p>
+                    <div class="w-24 h-1 bg-primary-500 mx-auto mt-6 rounded-full"></div>
+                </header>
+                <section class="mb-10 md:mb-16 lg:mb-20">
+                    <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
+                        <div class="w-full md:w-1/2">
+                            <h2 class="text-2xl md:text-3xl font-bold text-indigo-800 mb-3 md:mb-4">
+                                O Problema Social
+                            </h2>
+                            <p class="text-sm md:text-base text-gray-700 mb-3 md:mb-4">
+                                A violência contra idosos e pessoas com deficiência é uma grave violação de direitos
+                                humanos que permanece invisível em muitos contextos sociais. Estes grupos vulneráveis
+                                frequentemente enfrentam abandono, agressões físicas, psicológicas, financeiras e
+                                institucionais.
+                            </p>
+                            <p class="text-sm md:text-base text-gray-700 mb-4 md:mb-6">
+                                Nossa missão é dar visibilidade a essas questões, promover a conscientização e
+                                contribuir para a criação de políticas públicas efetivas de proteção.
+                            </p>
+                           <a href="https://ceicampinas.org.br/2025/04/25/cei-campinas-um-corpo-de-transformacao-inspiracao-e-direitos/" target="_blank">
+    <button
+        class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transform hover:scale-105 transition-all shadow-lg flex items-center"
+    >
+        <span>Um pouco sobre nós</span>
+    </button>
+</a>
+                        </div>
+                        <div class="md:w-1/2 relative overflow-hidden rounded-xl shadow-2xl group">
+                            <img
+                                src="https://images.unsplash.com/photo-1661933012684-d2ab1d613258?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHxlbGRlcmx5fGVufDB8fHx8MTc0Njg5NjI4OHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                alt="Idosos de mãos dadas"
+                                class="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                keywords="elderly, hands, walking stick, support, care, aging"
+                            />
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-indigo-900 to-transparent p-6 text-white"
+                            >
+                                <p class="font-semibold text-xl">
+                                    Juntos podemos criar uma sociedade mais inclusiva e segura para todos
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mb-20">
+                    <h2 class="text-3xl font-bold text-indigo-800 mb-8 text-center">Tipos de Violência</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+                        <div
+                            class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 md:hover:-translate-y-2 border-l-4 border-red-500"
+                        >
+                            <span class="material-symbols-outlined text-4xl text-red-500 mb-4"
+                                >sentiment_very_dissatisfied</span
+                            >
+                            <h3 class="text-xl font-bold mb-3">Violência Psicológica</h3>
+                            <p class="text-gray-600">
+                                Inclui humilhações, ameaças, intimidações e isolamento social, causando danos emocionais
+                                significativos às vítimas.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 border-l-4 border-orange-500"
+                        >
+                            <span class="material-symbols-outlined text-4xl text-orange-500 mb-4"
+                                >medical_services</span
+                            >
+                            <h3 class="text-xl font-bold mb-3">Violência Física</h3>
+                            <p class="text-gray-600">
+                                Agressões corporais que podem resultar em lesões, dor física e até mesmo consequências
+                                mais graves para a saúde e bem-estar.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 border-l-4 border-yellow-500"
+                        >
+                            <span class="material-symbols-outlined text-4xl text-yellow-500 mb-4">payments</span>
+                            <h3 class="text-xl font-bold mb-3">Violência Financeira</h3>
+                            <p class="text-gray-600">
+                                Exploração de recursos financeiros e materiais, incluindo apropriação indevida de bens,
+                                fraudes e extorsões.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 border-l-4 border-green-500"
+                        >
+                            <span class="material-symbols-outlined text-4xl text-green-500 mb-4">warning</span>
+                            <h3 class="text-xl font-bold mb-3">Negligência</h3>
+                            <p class="text-gray-600">
+                                Omissão de cuidados básicos necessários, resultando em desnutrição, desidratação e falta
+                                de higiene adequada.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 border-l-4 border-blue-500"
+                        >
+                            <span class="material-symbols-outlined text-4xl text-blue-500 mb-4">gavel</span>
+                            <h3 class="text-xl font-bold mb-3">Violência Institucional</h3>
+                            <p class="text-gray-600">
+                                Ocorre dentro de instituições públicas ou privadas que deveriam prestar assistência, mas
+                                acabam por violar direitos.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 border-l-4 border-purple-500"
+                        >
+                            <span class="material-symbols-outlined text-4xl text-purple-500 mb-4">favorite_border</span>
+                            <h3 class="text-xl font-bold mb-3">Violência Sexual</h3>
+                            <p class="text-gray-600">
+                                Qualquer ato ou tentativa de ato sexual não consentido, incluindo assédio, estupro e
+                                outras formas de abuso sexual.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="mb-20 bg-indigo-100 rounded-2xl p-8">
+                    <h2 class="text-3xl font-bold text-indigo-800 mb-8 text-center">Estatísticas Alarmantes</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-all">
+                            <div class="text-4xl font-bold text-primary-600 mb-2">60%</div>
+                            <p class="text-gray-600">
+                                dos idosos já sofreram algum tipo de violência em ambientes familiares
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-all">
+                            <div class="text-4xl font-bold text-primary-600 mb-2">83%</div>
+                            <p class="text-gray-600">das pessoas com deficiência relatam ter sofrido discriminação</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-all">
+                            <div class="text-4xl font-bold text-primary-600 mb-2">70%</div>
+                            <p class="text-gray-600">dos casos de violência contra idosos não são denunciados</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-all">
+                            <div class="text-4xl font-bold text-primary-600 mb-2">2x</div>
+                            <p class="text-gray-600">
+                                Pessoas com deficiência têm o dobro de chances de sofrer violência
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-4">
+                        Fonte: Organização Mundial da Saúde e estudos nacionais sobre violência contra grupos
+                        vulneráveis
+                    </p>
+                </section>
+                <section class="mb-20">
+                    <div class="flex flex-col lg:flex-row gap-12">
+                        <div class="lg:w-1/2">
+                            <h2 class="text-3xl font-bold text-indigo-800 mb-8">Projetos de Conscientização</h2>
+                            <details class="mb-3 md:mb-4 bg-white rounded-lg shadow-md overflow-hidden group">
+                                <summary
+                                    class="p-4 cursor-pointer font-semibold flex items-center justify-between bg-white hover:bg-indigo-50 transition-colors"
+                                >
+                                    <span>Palestras em Comunidades</span>
+                                    <span
+                                        class="material-symbols-outlined transform group-open:rotate-180 transition-transform"
+                                        >expand_more</span
+                                    >
+                                </summary>
+                                <div class="p-4 bg-indigo-50">
+                                    <p class="text-gray-700 mb-4">
+                                        Realizamos palestras educativas em centros comunitários, escolas e associações
+                                        de bairro para conscientizar sobre os sinais de violência e as medidas
+                                        preventivas.
+                                    </p>
+                                    <button class="text-primary-600 hover:text-primary-800 underline flex items-center">
+                                        Ver calendário de eventos
+                                        <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                                    </button>
+                                </div>
+                            </details>
+                            <details class="mb-4 bg-white rounded-lg shadow-md overflow-hidden group">
+                                <summary
+                                    class="p-4 cursor-pointer font-semibold flex items-center justify-between bg-white hover:bg-indigo-50 transition-colors"
+                                >
+                                    <span>Capacitação de Cuidadores</span>
+                                    <span
+                                        class="material-symbols-outlined transform group-open:rotate-180 transition-transform"
+                                        >expand_more</span
+                                    >
+                                </summary>
+                                <div class="p-4 bg-indigo-50">
+                                    <p class="text-gray-700 mb-4">
+                                        Oferecemos cursos gratuitos para cuidadores familiares e profissionais,
+                                        abordando temas como cuidados adequados, direitos humanos e prevenção de
+                                        maus-tratos.
+                                    </p>
+                                    <button class="text-primary-600 hover:text-primary-800 underline flex items-center">
+                                        Inscrever-se nos cursos
+                                        <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                                    </button>
+                                </div>
+                            </details>
+                            <details class="mb-4 bg-white rounded-lg shadow-md overflow-hidden group">
+                                <summary
+                                    class="p-4 cursor-pointer font-semibold flex items-center justify-between bg-white hover:bg-indigo-50 transition-colors"
+                                >
+                                    <span>Campanha &quot;Respeito Não Tem Idade&quot;</span>
+                                    <span
+                                        class="material-symbols-outlined transform group-open:rotate-180 transition-transform"
+                                        >expand_more</span
+                                    >
+                                </summary>
+                                <div class="p-4 bg-indigo-50">
+                                    <p class="text-gray-700 mb-4">
+                                        Campanha de mídia social e outdoor que visa mudar percepções sobre o
+                                        envelhecimento e promover o respeito aos direitos dos idosos em todos os espaços
+                                        sociais.
+                                    </p>
+                                    <button class="text-primary-600 hover:text-primary-800 underline flex items-center">
+                                        Compartilhar campanha
+                                        <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                                    </button>
+                                </div>
+                            </details>
+                            <details class="bg-white rounded-lg shadow-md overflow-hidden group">
+                                <summary
+                                    class="p-4 cursor-pointer font-semibold flex items-center justify-between bg-white hover:bg-indigo-50 transition-colors"
+                                >
+                                    <span>Acessibilidade Para Todos</span>
+                                    <span
+                                        class="material-symbols-outlined transform group-open:rotate-180 transition-transform"
+                                        >expand_more</span
+                                    >
+                                </summary>
+                                <div class="p-4 bg-indigo-50">
+                                    <p class="text-gray-700 mb-4">
+                                        Iniciativa que promove a inclusão de pessoas com deficiência através de
+                                        melhorias na acessibilidade de espaços públicos e privados, além de
+                                        conscientização sobre direitos.
+                                    </p>
+                                    <button class="text-primary-600 hover:text-primary-800 underline flex items-center">
+                                        Conhecer o projeto
+                                        <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                                    </button>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="lg:w-1/2 bg-white p-8 rounded-xl shadow-lg">
+                            <h2 class="text-3xl font-bold text-indigo-800 mb-6">Como Denunciar</h2>
+                            <p class="text-gray-700 mb-6">
+                                Se você presenciou ou suspeita de casos de violência contra idosos ou pessoas com
+                                deficiência, não se cale. Sua denúncia pode salvar vidas e garantir que os direitos
+                                dessas pessoas sejam respeitados.
+                            </p>
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-start">
+                                    <div class="bg-primary-100 p-2 rounded-full mr-4">
+                                        <span class="material-symbols-outlined text-primary-600">call</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg">Disque 100</h3>
+                                        <p class="text-gray-600">
+                                            Disque Direitos Humanos - serviço gratuito e anônimo
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-primary-100 p-2 rounded-full mr-4">
+                                        <span class="material-symbols-outlined text-primary-600">security</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg">Delegacias Especializadas</h3>
+                                        <p class="text-gray-600">
+                                            Procure a delegacia do idoso ou de proteção a grupos vulneráveis mais
+                                            próxima
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-primary-100 p-2 rounded-full mr-4">
+                                        <span class="material-symbols-outlined text-primary-600">balance</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg">Ministério Público</h3>
+                                        <p class="text-gray-600">
+                                            Entre em contato com a promotoria de justiça da sua cidade
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-primary-100 p-2 rounded-full mr-4">
+                                        <span class="material-symbols-outlined text-primary-600">location_city</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg">Conselho Municipal</h3>
+                                        <p class="text-gray-600">
+                                            Conselho do Idoso ou da Pessoa com Deficiência do seu município
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                                <div class="flex">
+                                    <span class="material-symbols-outlined text-yellow-500 mr-2">info</span>
+                                    <p class="text-gray-700">
+                                        Lembre-se: a denúncia pode ser anônima. O importante é não se calar diante da
+                                        violência.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
 </html>
