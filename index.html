@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEI - Centro Educacional Integrado</title>
     <style>
-        /* Estilos gerais */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -50,10 +49,10 @@
             color: white;
             text-align: center;
             padding: 1rem;
-        }
-
-        /* Estilos para impressão */
-        @media print {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+             @media print {
             body {
                 background-color: white;
                 font-size: 12pt;
@@ -110,27 +109,8 @@
 
             p, li {
                 page-break-inside: avoid;
-                  
-            @media print {
-           
-
-            /* Oculta elementos não essenciais */
-            nav, .btn, .social-media {
-                display: none !important;
             }
-
-            @page {
-                margin: 2cm;
-                size: A4;
-            }
-
-            h1, h2, h3 {
-                page-break-after: avoid;
-            }
-
-            p, li {
-                page-break-inside: avoid;
-            }
+        }
         }
     </style>
 </head>
@@ -141,13 +121,51 @@
     </header>
 
     <div class="container">
-        <!-- Conteúdo mantido igual ao anterior -->
+        <div class="history-section">
+            <h2>Nossa História</h2>
+            <div class="timeline">
+                <p>Fundado em 22 de Setembro de 1981 pela pedagoga <strong>Suely Felix Pereira</strong>, o CEI surgiu da necessidade de criar novos programas de educação especial inspirados em experiências internacionais.</p>
+
+                <p>Iniciamos nossas atividades em uma casa alugada na Rua Duque de Caxias, com:</p>
+                <ul>
+                    <li>5 profissionais multidisciplinares</li>
+                    <li>Atendimento a crianças de 0 a 4 anos</li>
+                    <li>Foco no desenvolvimento global e vínculos familiares</li>
+                </ul>
+
+                <h3>Marcos Importantes:</h3>
+                <p><strong>1981-1993:</strong> Atuação em diversas sedes provisórias com apoio de colaboradores como Cornelis Westijk e instituições internacionais.</p>
+                
+                <p><strong>2004:</strong> Primeira sede própria no bairro Castelo, doada pela <em>Christoffel Blindenmission (CBM International)</em>.</p>
+                
+                <p><strong>2006:</strong> Transferência para sede definitiva na Rua Dr. Quirino, 1856, com novo nome em homenagem ao Padre Santi Capriotti.</p>
+                
+                <p><strong>2017:</strong> Expansão para a área de Assistência Social, ampliando nosso alcance na comunidade.</p>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2>Atuação Atual</h2>
+            <ul>
+                <li>Mais de 1.600 pessoas atendidas</li>
+                <li>120 colaboradores multidisciplinares</li>
+                <li>Serviços educacionais e socioassistenciais</li>
+                <li>Atendimentos gratuitos e de qualidade</li>
+            </ul>
+        </div>
+
+        <div class="history-section">
+            <h2>Nossa Missão</h2>
+            <blockquote>
+                "Desenvolver as potencialidades humanas de forma sustentável na região de Campinas, promovendo equidade e inclusão social."
+            </blockquote>
+        </div>
     </div>
 
     <footer>
         <p>Contato: Rua Dr. Quirino, 1856 - Campinas/SP</p>
         <p>Telefone: (19) 9999-9999 | Email: contato@cei.org.br</p>
-        <p>© 2024 CEI - Centro Educacional Integrado</p>
+        <p>© 2024 CEI - Centro Educacional Integrado. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
