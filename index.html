@@ -914,74 +914,139 @@
                 background: linear-gradient(135deg, #ffffff, #d4d4d4);
             }
             @media print {
+    @page {
+        margin: 2cm;
+        size: A4 portrait;
+    }
+
+    body {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        background: white !important;
+        padding: 0 !important;
+    }
+
     #webcrumbs {
         width: 100% !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
         padding: 0 !important;
         background: white !important;
+        box-shadow: none !important;
     }
 
-    /* Esconder elementos não essenciais */
-    nav, button, .material-symbols-outlined, 
-    .absolute, .bg-gradient-to-t, .hidden {
-        display: none !important;
-    }
-
-    /* Ajustar layout principal */
+    /* Manter estrutura principal */
     header, section {
-        padding: 0 !important;
-        margin: 20px 0 !important;
+        padding: 20px 0 !important;
+        margin: 0 0 30px !important;
         break-inside: avoid;
     }
 
-    /* Tipografia para impressão */
-    h1, h2, h3, h4 {
-        color: #000 !important;
-        text-shadow: none !important;
+    /* Centralização de conteúdo */
+    .mx-auto, .text-center {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
     }
 
-    /* Cards e elementos de conteúdo */
-    .bg-white, .bg-primary-50 {
+    /* Ajustes tipográficos */
+    h1, h2, h3 {
+        text-align: center !important;
+        color: #000 !important;
+    }
+
+    h1 {
+        font-size: 32px !important;
+        margin-bottom: 15px !important;
+    }
+
+    h2 {
+        font-size: 28px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Grids e colunas */
+    .grid, .md\:grid-cols-2, .lg\:grid-cols-3 {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 20px !important;
+    }
+
+    /* Cards e elementos gráficos */
+    .bg-white, .rounded-xl, .shadow-lg {
         box-shadow: none !important;
         border: 1px solid #ddd !important;
-        margin: 10px 0;
+        border-radius: 8px !important;
+        margin: 15px 0 !important;
+        break-inside: avoid;
     }
 
     /* Imagens */
     img {
-        max-width: 50% !important;
-        float: right;
-        margin: 0 0 10px 10px !important;
+        max-width: 80% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 15px auto !important;
+        border-radius: 8px !important;
     }
 
     /* Timeline vertical */
     .relative:has(.absolute) {
         padding-left: 0 !important;
     }
+
     .absolute.transform {
-        display: none;
+        left: 50% !important;
+        background: #888 !important;
     }
 
-    /* Grids e flexbox */
-    .grid, .flex {
-        display: block !important;
-    }
-
-    /* Cores de texto */
+    /* Cores e elementos interativos */
     .text-primary-600, .text-primary-800 {
+        color: #333 !important;
+    }
+
+    .bg-primary-50, .bg-primary-200 {
+        background: #f8f8f8 !important;
+    }
+
+    /* Elementos ocultos na impressão */
+    nav, button, .material-symbols-outlined, 
+    .absolute.bg-primary-600, .hidden {
+        display: none !important;
+    }
+
+    /* Links e botões */
+    a {
+        text-decoration: underline !important;
         color: #000 !important;
     }
 
-    /* Remover fundos coloridos */
-    .bg-primary-200, .bg-primary-500, 
-    .bg-primary-600, .bg-gradient-to-br {
-        background: white !important;
+    button, .hover\:scale-105 {
+        display: none !important;
     }
 
-    /* Links */
-    a::after {
-        content: " (" attr(href) ")";
-        font-size: 0.8em;
-        font-weight: normal;
+    /* Ajuste específico para timeline */
+    .grid.grid-cols-1.md\:grid-cols-5 {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+    }
+
+    .md\:col-span-2 {
+        grid-column: 1 !important;
+    }
+
+    /* Mantém espaçamento original */
+    .mb-10, .mb-20, .mb-8 {
+        margin-bottom: 15px !important;
+    }
+
+    /* Textos longos */
+    p, li {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        color: #444 !important;
+        text-align: justify !important;
     }
 }
         </style>
