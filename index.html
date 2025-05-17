@@ -110,6 +110,65 @@
 
             p, li {
                 page-break-inside: avoid;
+                  
+            @media print {
+            body {
+                background-color: white;
+                font-size: 12pt;
+                line-height: 1.5;
+            }
+
+            header {
+                background-color: white !important;
+                color: black !important;
+                padding: 1cm 0;
+                border-bottom: 2pt solid #ccc;
+            }
+
+            footer {
+                background-color: white !important;
+                color: black !important;
+                padding: 0.5cm 0;
+                border-top: 2pt solid #ccc;
+                position: fixed;
+                bottom: 0;
+            }
+
+            .history-section {
+                box-shadow: none;
+                border: 1pt solid #ddd;
+                margin-bottom: 0.5cm;
+                page-break-inside: avoid;
+            }
+
+            .timeline {
+                border-left-width: 2pt;
+            }
+
+            a::after {
+                content: " (" attr(href) ")";
+                font-size: 0.8em;
+                font-weight: normal;
+                color: #666;
+            }
+
+            /* Oculta elementos não essenciais */
+            nav, .btn, .social-media {
+                display: none !important;
+            }
+
+            @page {
+                margin: 2cm;
+                size: A4;
+            }
+
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+
+            p, li {
+                page-break-inside: avoid;
+            }
             }
         }
     </style>
