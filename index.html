@@ -901,6 +901,71 @@
                     grid-template-columns: repeat(4, minmax(0, 1fr));
                 }
             }
+                    @media print {
+            body {
+                background: white !important;
+                padding: 20px !important;
+            }
+            
+            #webcrumbs {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            /* Esconder elementos desnecessários */
+            nav, button, .material-symbols-outlined,
+            [data-id="6vl3"], [data-id="EIXG"], [data-id="CCFK"] {
+                display: none !important;
+            }
+
+            /* Ajustar cores para melhor contraste */
+            * {
+                color: #000 !important;
+                background: white !important;
+                box-shadow: none !important;
+            }
+
+            /* Ajustar layout das seções */
+            section, header, div {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            /* Redimensionar imagens */
+            img {
+                max-height: 200px;
+                width: auto !important;
+                margin: 10px 0;
+            }
+
+            /* Ajustar timeline */
+            [data-id="c392"] {
+                display: none;
+            }
+            
+            [data-id="025T"] > div {
+                grid-template-columns: 1fr !important;
+                margin-bottom: 20px;
+            }
+
+            /* Melhorar espaçamento de texto */
+            p, li {
+                line-height: 1.4;
+                margin-bottom: 8px;
+            }
+
+            /* Ajustar títulos */
+            h1, h2, h3 {
+                page-break-after: avoid;
+                margin: 15px 0 10px;
+            }
+
+            /* Grid de serviços */
+            [data-id="OF94"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
 
             body {
                 line-height: inherit;
